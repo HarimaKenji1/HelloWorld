@@ -18,3 +18,7 @@ Starting
 Student
 
 ###### > Nothing
+
+| Height        | Weight        | Vital Capacity  |
+| ------------- |:-------------:| ---------------:|
+|      ???      |      ????     |      ?????      |
