@@ -14,6 +14,24 @@ function Tree (x: number) :void {
        }
        console.log(floor);
    }
+   for(var k : number = 0; k < x / 2 ; k++ ){
+       floor = "";
+       for(var m : number = 0; m < x * 2 - 1; m++){
+           if( m < x / 2)
+              floor += " ";
+           if( x <= 3){
+           if( m >= x / 2 && m < x * 3 / 2 - 2)
+              floor += "|"; 
+           }
+           if( x > 3 ){
+                if( m >= x / 2 && m <= x * 3 / 2 - 2 )
+              floor += "|"; 
+             
+           }
+
+       }
+       console.log(floor);
+   }
   
 }
 
