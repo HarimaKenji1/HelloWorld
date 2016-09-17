@@ -1,28 +1,21 @@
 
 
-
-function Tree(x: number){
+function Tree (x: number) :void {
    var i : number = 0;
    var j : number = 0; 
-   var tree : string[][] = new Array();
-   for(j = 0 ; j < x ; j++){
-
-       for(i = 0 ; i < x ; i++ ){
-
-           if( i <= x - 1 + j || i >= x - 1 - j)
-              tree[i][j] = "*";
-       else
-            tree[i][j] = " ";
+   var floor : string = "";
+   for( j = 0 ; j < x ; j++){
+       floor = "";
+       for(i = 0 ; i < x * 2 - 1 ; i++ ){
+           if( i < x - 1 - j)
+              floor += " ";
+           if( i >= x - 1 - j && i <= x + j - 1 )
+              floor += "*";
+       }
+       console.log(floor);
    }
-
-  }
-
-  for(j = 0 ; j < x ; j++ ){
-
-      for(i = 0 ; i < x ; i++ ){
-          console.log(tree[i][j]);
-      }
-
-  }
-
+  
 }
+
+
+Tree(4);
