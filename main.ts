@@ -1,7 +1,5 @@
 declare var process: NodeProcess;
 
-//连个作业名也能看错，我真的是太辣鸡了QAQ
-
 function Tree (x: number) :void {
    var i : number = 0;
    var j : number = 0; 
