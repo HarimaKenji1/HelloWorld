@@ -2,31 +2,31 @@ declare var process: NodeProcess;
 
 //
 
-function Tree (x: number) :void {
-   var i : number = 0;
-   var j : number = 0; 
+function PrintaTree (totalline: number) :void {
+   var part : number = 0;
+   var currentline : number = 0; 
    var floor : string = "";
-   for( j = 0 ; j < x ; j++){
+   for( currentline = 0 ; currentline < totalline ; currentline++){
        floor = "";
-       for(i = 0 ; i < x * 2 - 1 ; i++ ){
-           if( i < x - 1 - j)
+       for(part = 0 ; part < totalline * 2 - 1 ; part++ ){
+           if( part < totalline - 1 - currentline)
               floor += " ";
-           if( i >= x - 1 - j && i <= x + j - 1 )
+           if( part >= totalline - 1 - currentline && part <= totalline + currentline - 1 )
               floor += "*";
        }
        console.log(floor);
    }
-   for(var k : number = 0; k < x / 2 ; k++ ){
+   for(var rootline : number = 0; rootline < totalline / 2 ; rootline++ ){
        floor = "";
-       for(var m : number = 0; m < x * 2 - 1; m++){
-           if( m < x / 2)
+       for(var treepart : number = 0; treepart < totalline * 2 - 1; treepart++){
+           if( treepart < totalline / 2)
               floor += " ";
-           if( x <= 3){
-           if( m >= x / 2 && m < x * 3 / 2 - 2)
+           if( totalline <= 3){
+           if( treepart >= totalline / 2 && treepart < totalline * 3 / 2 - 2)
               floor += "|"; 
            }
-           if( x > 3 ){
-                if( m >= x / 2 && m <= x * 3 / 2 - 2 )
+           if( totalline > 3 ){
+                if( treepart >= totalline / 2 && treepart <= totalline * 3 / 2 - 2 )
               floor += "|"; 
              
            }
@@ -167,4 +167,4 @@ declare class NodeProcess extends EventEmitter {
 }
 
 var x : string = process.argv[2];
-Tree(+x);
+PrintaTree(+x);
